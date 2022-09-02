@@ -1,24 +1,317 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4V9-o1-I8k">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Anasayfa-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="Anasayfa" customModule="vatanBilgisayar_ui" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vatan_logo" translatesAutoresizingMaskIntoConstraints="NO" id="zE5-Ac-HA3">
+                                <rect key="frame" x="97" y="44" width="220" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Nds-xa-sqv"/>
+                                    <constraint firstAttribute="width" constant="220" id="jbv-Go-qzo"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  Ürün Ara" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5zO-4M-XcF">
+                                <rect key="frame" x="16" y="84" width="382" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="IgE-v2-nTz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="w84-t2-OPc">
+                                <rect key="frame" x="0.0" y="143" width="414" height="203"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ici-aW-EUm">
+                                    <size key="itemSize" width="405" height="130"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="zhq-yC-mGn" customClass="FirsatlarCollectionViewCell" customModule="vatanBilgisayar_ui" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.5" width="414" height="202"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="INZ-fr-FAx">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vatan_firsat1" translatesAutoresizingMaskIntoConstraints="NO" id="lyo-4S-Fcs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="202" id="2CH-tY-4Ro"/>
+                                                        <constraint firstAttribute="width" constant="414" id="VZg-iV-8V1"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="lyo-4S-Fcs" secondAttribute="bottom" id="DFk-U5-8R0"/>
+                                                <constraint firstAttribute="trailing" secondItem="lyo-4S-Fcs" secondAttribute="trailing" id="Oh4-Gj-6GC"/>
+                                                <constraint firstItem="lyo-4S-Fcs" firstAttribute="centerX" secondItem="INZ-fr-FAx" secondAttribute="centerX" id="h3Q-8u-Zfr"/>
+                                                <constraint firstItem="lyo-4S-Fcs" firstAttribute="leading" secondItem="INZ-fr-FAx" secondAttribute="leading" id="hwA-fa-opx"/>
+                                                <constraint firstItem="lyo-4S-Fcs" firstAttribute="top" secondItem="INZ-fr-FAx" secondAttribute="top" id="kUA-qV-TJT"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="202"/>
+                                        <connections>
+                                            <outlet property="firsatImageView" destination="lyo-4S-Fcs" id="i8r-xK-5aI"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fyT-4l-ALl">
+                                <rect key="frame" x="0.0" y="419" width="414" height="394"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="37Z-k1-8oW">
+                                    <size key="itemSize" width="272" height="367"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell_gunluk" id="0xu-MX-nie" customClass="GunlukUrunlerCollectionViewCell" customModule="vatanBilgisayar_ui" customModuleProvider="target">
+                                        <rect key="frame" x="71" y="0.0" width="272" height="367"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CxQ-iz-ym8">
+                                            <rect key="frame" x="0.0" y="0.0" width="272" height="367"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="msn-UF-Bvh">
+                                                    <rect key="frame" x="24" y="30" width="224" height="170"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="170" id="q6G-zd-QV9"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sepette indirim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGk-jc-rTh">
+                                                    <rect key="frame" x="24" y="266.5" width="224" height="13.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fiyat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2QI-dg-oAt">
+                                                    <rect key="frame" x="24" y="287" width="224" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Açıklama" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usC-7P-6W6">
+                                                    <rect key="frame" x="24" y="316" width="224" height="14"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URUN KODU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNC-mw-rDC">
+                                                    <rect key="frame" x="24" y="248" width="224" height="13.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Oa-Ji-Qhi">
+                                                    <rect key="frame" x="24" y="339" width="224" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="Ody-QK-mAV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="usC-7P-6W6" firstAttribute="leading" secondItem="CxQ-iz-ym8" secondAttribute="leading" constant="24" id="2bD-fV-m7P"/>
+                                                <constraint firstItem="msn-UF-Bvh" firstAttribute="top" secondItem="CxQ-iz-ym8" secondAttribute="top" constant="30" id="8BB-MO-S1q"/>
+                                                <constraint firstItem="8Oa-Ji-Qhi" firstAttribute="leading" secondItem="CxQ-iz-ym8" secondAttribute="leading" constant="24" id="AFV-HV-Pw2"/>
+                                                <constraint firstItem="8Oa-Ji-Qhi" firstAttribute="top" secondItem="usC-7P-6W6" secondAttribute="bottom" constant="9" id="Ajh-Ws-y6B"/>
+                                                <constraint firstItem="msn-UF-Bvh" firstAttribute="leading" secondItem="CxQ-iz-ym8" secondAttribute="leading" constant="24" id="Dky-6a-JX1"/>
+                                                <constraint firstItem="2QI-dg-oAt" firstAttribute="top" secondItem="gGk-jc-rTh" secondAttribute="bottom" constant="7" id="F15-f3-9k2"/>
+                                                <constraint firstItem="KNC-mw-rDC" firstAttribute="leading" secondItem="CxQ-iz-ym8" secondAttribute="leading" constant="24" id="OQd-Yr-9LO"/>
+                                                <constraint firstItem="usC-7P-6W6" firstAttribute="top" secondItem="2QI-dg-oAt" secondAttribute="bottom" constant="8" id="TcU-t7-P0g"/>
+                                                <constraint firstAttribute="trailing" secondItem="msn-UF-Bvh" secondAttribute="trailing" constant="24" id="X6V-MG-Ay8"/>
+                                                <constraint firstAttribute="trailing" secondItem="gGk-jc-rTh" secondAttribute="trailing" constant="24" id="l6T-yP-eW6"/>
+                                                <constraint firstAttribute="trailing" secondItem="8Oa-Ji-Qhi" secondAttribute="trailing" constant="24" id="lUA-w8-bhq"/>
+                                                <constraint firstAttribute="trailing" secondItem="KNC-mw-rDC" secondAttribute="trailing" constant="24" id="nbD-Wa-c0I"/>
+                                                <constraint firstAttribute="trailing" secondItem="usC-7P-6W6" secondAttribute="trailing" constant="24" id="nu8-yV-iUX"/>
+                                                <constraint firstAttribute="bottom" secondItem="8Oa-Ji-Qhi" secondAttribute="bottom" constant="8" id="o7p-bj-Bbd"/>
+                                                <constraint firstItem="2QI-dg-oAt" firstAttribute="leading" secondItem="CxQ-iz-ym8" secondAttribute="leading" constant="24" id="qhL-8u-f5T"/>
+                                                <constraint firstItem="gGk-jc-rTh" firstAttribute="top" secondItem="KNC-mw-rDC" secondAttribute="bottom" constant="5" id="wLQ-oN-Pyx"/>
+                                                <constraint firstAttribute="trailing" secondItem="2QI-dg-oAt" secondAttribute="trailing" constant="24" id="wbV-JY-tud"/>
+                                                <constraint firstItem="gGk-jc-rTh" firstAttribute="leading" secondItem="CxQ-iz-ym8" secondAttribute="leading" constant="24" id="xf2-F7-sq8"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="272" height="367"/>
+                                        <connections>
+                                            <outlet property="image_urun" destination="msn-UF-Bvh" id="P1a-kt-A1L"/>
+                                            <outlet property="label_aciklama" destination="usC-7P-6W6" id="j7s-3q-xTy"/>
+                                            <outlet property="label_fiyat" destination="2QI-dg-oAt" id="7dN-oY-439"/>
+                                            <outlet property="label_indirim" destination="gGk-jc-rTh" id="cbh-1m-H8a"/>
+                                            <outlet property="label_urun_kod" destination="KNC-mw-rDC" id="b1I-Ph-1uM"/>
+                                            <outlet property="tf_kargo_ucretsiz" destination="8Oa-Ji-Qhi" id="Bzh-GE-54d"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Günün Fırsatları" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieh-6o-7a5">
+                                <rect key="frame" x="0.0" y="374" width="414" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="pmq-6V-0RG">
+                                <rect key="frame" x="16" y="348" width="378" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.19607843137254902" blue="0.46666666666666667" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.0" green="0.11764705882352941" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0039215686274509803" green="0.19607843137254902" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zE5-Ac-HA3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UHQ-Ti-ZCm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5zO-4M-XcF" secondAttribute="trailing" constant="16" id="Xbr-bB-ZAp"/>
+                            <constraint firstItem="5zO-4M-XcF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZAT-cQ-YSC"/>
+                            <constraint firstItem="5zO-4M-XcF" firstAttribute="top" secondItem="zE5-Ac-HA3" secondAttribute="bottom" constant="10" id="gm7-Ie-K6N"/>
+                            <constraint firstItem="zE5-Ac-HA3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wCn-DU-lkx"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Anasayfa" id="wVb-1J-nhZ">
+                        <imageReference key="image" image="house.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="firsatlarColectionView" destination="w84-t2-OPc" id="NLb-XO-oiV"/>
+                        <outlet property="gunlukUrunlerCV" destination="fyT-4l-ALl" id="Sxf-BM-rD6"/>
+                        <outlet property="myPage" destination="pmq-6V-0RG" id="GUa-Gt-803"/>
+                        <outlet property="tf_search_bar" destination="5zO-4M-XcF" id="uea-IW-nam"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1028.985507246377" y="65.625"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="WcM-tN-3CR">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="4V9-o1-I8k" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hE3-KF-mjA">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="aSn-C3-1zC"/>
+                        <segue destination="WTz-aI-Evf" kind="relationship" relationship="viewControllers" id="Uer-wu-ebF"/>
+                        <segue destination="j00-cu-aDA" kind="relationship" relationship="viewControllers" id="Smx-5u-LQc"/>
+                        <segue destination="fkP-4x-Erg" kind="relationship" relationship="viewControllers" id="KgH-am-Bcr"/>
+                        <segue destination="jI9-HZ-ieB" kind="relationship" relationship="viewControllers" id="dBG-Oc-h41"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ct-rP-M6k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="65.625"/>
+        </scene>
+        <!--Kategoriler-->
+        <scene sceneID="9jM-lU-dTZ">
+            <objects>
+                <viewController id="WTz-aI-Evf" customClass="ViewController" customModule="vatanBilgisayar_ui" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W0k-ja-Gji">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="BR4-lP-Vg2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Kategoriler" id="vER-7D-kOb">
+                        <imageReference key="image" image="cube.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lt0-zY-fwL" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1029" y="793"/>
+        </scene>
+        <!--Hesabım-->
+        <scene sceneID="bHK-e1-d2I">
+            <objects>
+                <viewController id="fkP-4x-Erg" customClass="ViewController" customModule="vatanBilgisayar_ui" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5kf-ap-C2t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="MHg-Kp-dZS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hesabım" id="5Ws-fh-CgX">
+                        <imageReference key="image" image="person.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yUV-FK-u9D" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="793"/>
+        </scene>
+        <!--Daha Fazla-->
+        <scene sceneID="iMK-8m-wPP">
+            <objects>
+                <viewController id="jI9-HZ-ieB" customClass="ViewController" customModule="vatanBilgisayar_ui" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LFo-Id-Bie">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4PE-rC-pv3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Daha Fazla" id="xwh-lU-4FF">
+                        <imageReference key="image" image="ellipsis" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gat-Wm-emM" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1030" y="793"/>
+        </scene>
+        <!--Sepet-->
+        <scene sceneID="hM6-KE-y9h">
+            <objects>
+                <viewController id="j00-cu-aDA" customClass="ViewController" customModule="vatanBilgisayar_ui" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LNA-ZH-xeX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pnX-mt-9ap"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Sepet" id="5Nq-Zz-h4c">
+                        <imageReference key="image" image="cart.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="feU-1d-K4h" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1030" y="66"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
+        <image name="cube.fill" catalog="system" width="128" height="124"/>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="vatan_firsat1" width="1336" height="380"/>
+        <image name="vatan_logo" width="274" height="82"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
